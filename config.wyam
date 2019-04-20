@@ -1,0 +1,23 @@
+#recipe Blog
+
+Settings[Keys.Host] = "gaijindeveloper.org";
+Settings[BlogKeys.Title] = "Gaijin Developer";
+Settings[BlogKeys.Description] = "Welcome!";
+// var Localizations = new Dictionary<string,string>();
+
+// Localizations.Add("en","test");
+// Localizations.Add("ja","テスト");
+
+// Settings["Localization"] = Localizations;
+//Settings["__SupportedLocalizations"]
+
+
+// Add any pipeline customizations here
+
+
+
+// get all *.*.md
+
+// group by $2
+// and create folder $2 and add all .md's without $2
+
