@@ -1,0 +1,20 @@
+dist: xenial
+os:
+  - linux
+language: csharp
+mono: none
+dotnet: 2.1.502
+before_script:
+  - dotnet tool install -g Wyam.Tool
+script:
+ - dotnet restore
+ - wyam --recipe Blog --theme CleanBlog
+deploy:
+  provider: s3
+  access_key_id: "$aws_access_key"
+  secret_access_key: "$aws_access_secret"
+  bucket: "blog.gaijindeveloper.org"
+  skip_cleanup: true
+  local_dir: output
+  acl: public_read
+
