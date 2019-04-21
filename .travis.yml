@@ -4,7 +4,7 @@ os:
 language: csharp
 mono: none
 dotnet: 2.1.502
-before_script:
+install:
   - dotnet tool install -g Wyam.Tool
 script:
  - dotnet restore
