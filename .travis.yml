@@ -4,11 +4,10 @@ os:
 language: csharp
 mono: none
 dotnet: 2.1.502
-install:
+before_script:
   - dotnet tool install -g Wyam.Tool
 script:
- - dotnet restore
- - wyam --recipe Blog --theme CleanBlog
+  - wyam --recipe Blog --theme CleanBlog
 deploy:
   provider: s3
   access_key_id: "$aws_access_key"
