@@ -1,5 +1,8 @@
 #recipe Blog
 
+System.Globalization.CultureInfo.DefaultThreadCurrentCulture
+    = System.Globalization.CultureInfo.CreateSpecificCulture("en-AU");
+
 Settings[Keys.Host] = "gaijindeveloper.org";
 Settings[BlogKeys.Title] = "Gaijin Developer";
 Settings[BlogKeys.Description] = "Welcome!";
