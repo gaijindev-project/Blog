@@ -14,7 +14,7 @@ Settings[BlogKeys.Title] = "Gaijin Developer";
 Settings[BlogKeys.Description] = "Welcome!";
 
 //Make .html extension show
-//Settings[Keys.LinkHideExtensions] = false;
+Settings[Keys.LinkHideExtensions] = false;
 
 //Compress posts
 Pipelines.Add("Content",
