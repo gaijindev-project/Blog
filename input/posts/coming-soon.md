@@ -8,4 +8,4 @@ Lanague: en
 # Updates coming soon!
 
 
-[My Channel](https://youtube.com)
+[Subscribe to My Channel](https://www.youtube.com/channel/UCKQJ4exkxwch-o94uTlQWlg?sub_confirmation=1)
