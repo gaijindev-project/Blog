@@ -1,11 +1,27 @@
 #recipe Blog
+#n Wyam.Markdown
+#n Wyam.Razor
+#n Wyam.Yaml
+#n Wyam.Html
+#n Wyam.Minification
 
 System.Globalization.CultureInfo.DefaultThreadCurrentCulture
     = System.Globalization.CultureInfo.CreateSpecificCulture("en-AU");
 
+Settings[Keys.LinksUseHttps] = true;
 Settings[Keys.Host] = "gaijindeveloper.org";
 Settings[BlogKeys.Title] = "Gaijin Developer";
 Settings[BlogKeys.Description] = "Welcome!";
 
+//Make .html extension show
+//Settings[Keys.LinkHideExtensions] = false;
 
-Settings[Keys.LinkHideExtensions] = false;
+//Compress posts
+Pipelines.Add("Content",
+    ReadFiles("*.md"),
+    FrontMatter(Yaml()),
+    Markdown(),
+    Razor(),
+    MinifyHtml(),
+    WriteFiles(".html")
+);
