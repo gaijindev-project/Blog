@@ -25,3 +25,15 @@ Pipelines.Add("Content",
     MinifyHtml(),
     WriteFiles(".html")
 );
+
+Pipelines.Add("CSS",
+    ReadFiles("*.css"),
+    MinifyCss(),
+    WriteFiles(".css")
+);
+
+Pipelines.Add("JS",
+    ReadFiles("*.js"),
+    MinifyJs(true),
+    WriteFiles(".js")
+);
